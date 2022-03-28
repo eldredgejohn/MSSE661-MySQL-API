@@ -2,7 +2,7 @@
   "name": "example",
   "version": "1.0.0",
   "description": "Example test app",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
     "start": "nodemon ./src"
   },
