@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 const authQueries = require('./queries/auth.queries');
-const tasksQueries = require('./queries/tasks.queries');
+const soapsQueries = require('./queries/soaps.queries');
 
 // Get the Host from Environment or use default
 const host = process.env.DB_HOST || 'localhost';
@@ -32,9 +32,9 @@ con.connect(function(err) {
     console.log('Users table created or exists already!');
   });
 
-  con.query(tasksQueries.CREATE_TASKS_TABLE, function(err, result) {
+  con.query(soapsQueries.CREATE_SOAPS_TABLE, function(err, result) {
     if (err) throw err;
-    console.log('Tasks table created or exists already!');
+    console.log('Soaps table created or exists already!');
   });
 });
 
